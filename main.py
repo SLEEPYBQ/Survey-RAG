@@ -82,31 +82,34 @@ def query_document(embedding_path, query, api_base, api_key):
     except Exception as e:
         return False, str(e)
 
+# 定义简洁回答指令变量
+concise_instruction = "Please provide a concise answer without additional explanations. If the information is not available, simply respond with 'N/A'. "
+
 # 定义所有问题列表
 def get_questions():
     return [
-        {"id": "stakeholder", "question": "Involved stakeholder? 参与的利益相关者？"},
-        {"id": "sample_size", "question": "Sample size 样本大小"},
-        {"id": "country", "question": "Participant country 参与者所在国家"},
-        {"id": "demographic", "question": "Participant demographic 参与者人口统计信息"},
-        {"id": "impairment", "question": "Cognitive and physical impairment 认知和身体障碍"},
-        {"id": "needs", "question": "Needs and expectations? 需求和期望？"},
-        {"id": "context", "question": "Context: 什么样的社区，什么级别的护理机构，老年人所在的社区或环境"},
-        {"id": "care_process", "question": "Process of the care: 前期还是长期；第一次接触？"},
-        {"id": "methodology", "question": "Methodology 方法论"},
-        {"id": "care_type", "question": "Care type 护理类型"},
-        {"id": "robot_type", "question": "Robot type (embodiment) 机器人类型（具象化）"},
-        {"id": "robot_name", "question": "Robot name 机器人名称"},
-        {"id": "robot_function", "question": "Robot general function 机器人一般功能"},
-        {"id": "facilitating_functions", "question": "Facilitating functions (specific) 促进功能（具体）"},
-        {"id": "inhibitory_functions", "question": "Inhibitory functions (specific) 抑制功能（具体）"},
-        {"id": "stakeholder_facilitating", "question": "Stakeholder facilitating characteristics 利益相关者促进特征"},
-        {"id": "stakeholder_inhibitory", "question": "Stakeholder inhibitory characteristics 利益相关者抑制特征"},
-        {"id": "engagement", "question": "Engagement 参与度"},
-        {"id": "acceptance", "question": "Acceptance 接受度"},
-        {"id": "trust", "question": "Trust 信任"},
-        {"id": "key_findings", "question": "Key findings (brief) 关键发现（简要）"},
-        {"id": "additional_info", "question": "Additional info 其他信息"}
+        {"id": "stakeholder", "question": concise_instruction + "What are the involved stakeholders? For example: older adults, caregivers, domain experts, solution providers, etc."},
+        {"id": "sample_size", "question": concise_instruction + "What is the sample size of the study?"},
+        {"id": "country", "question": concise_instruction + "In which country or countries were the participants located?"},
+        {"id": "demographic", "question": concise_instruction + "What are the demographics of the participants in the study?"},
+        {"id": "impairment", "question": concise_instruction + "What cognitive or physical impairments do the participants have, if any?"},
+        {"id": "needs", "question": concise_instruction + "What needs are addressed by the robot? Or what are the needs of the stakeholders? For example: chatting, reminding, daily routine assistance, exercise guidance, etc."},
+        {"id": "context", "question": concise_instruction + "What is the context of the study? For example, what type of community, level of care facility, or environment are the older adults in?"},
+        {"id": "care_process", "question": concise_instruction + "What is the process of care described in the study? Is it early stage or long-term care? Is it first contact?"},
+        {"id": "methodology", "question": concise_instruction + "What methodology was used in this paper? For example: focus group, one-to-one interview, questionnaire, experiment, etc."},
+        {"id": "care_type", "question": concise_instruction + "What type of care is provided or discussed in the study?"},
+        {"id": "robot_type", "question": concise_instruction + "Which type of robot is used in the study? For example: humanoid, machine-like, animal-like, etc."},
+        {"id": "robot_name", "question": concise_instruction + "What is the name of the robot used in the study?"},
+        {"id": "robot_function", "question": concise_instruction + "What is the general function of the robot in the study?"},
+        {"id": "facilitating_functions", "question": concise_instruction + "What specific functions of the robot facilitate care or assistance?"},
+        {"id": "inhibitory_functions", "question": concise_instruction + "What specific functions of the robot inhibit or hinder care or assistance?"},
+        {"id": "stakeholder_facilitating", "question": concise_instruction + "What characteristics of the stakeholders facilitate the use of the robot?"},
+        {"id": "stakeholder_inhibitory", "question": concise_instruction + "What characteristics of the stakeholders inhibit or hinder the use of the robot?"},
+        {"id": "engagement", "question": concise_instruction + "How is user engagement with the robot described or measured in the study? If not, response should be 'N/A'."},
+        {"id": "acceptance", "question": concise_instruction + "How is user acceptance of the robot described or measured in the study? If not, response should be 'N/A'."},
+        {"id": "trust", "question": concise_instruction + "How is trust in the robot addressed or measured in the study? If not, response should be 'N/A'."},
+        {"id": "key_findings", "question": concise_instruction + "What are the key findings of the study?"},
+        {"id": "additional_info", "question": concise_instruction + "What additional information is relevant from this study that doesn't fit into the categories above?"}
     ]
 
 def process_question(question, embedding_paths, args, all_results=None):
@@ -304,10 +307,10 @@ def main():
                 print(f"\n[{i+1}/{len(questions)}] 查询问题: {question['question']}")
                 process_question(question, embedding_paths, args, all_results)
                 
-                # 避免API限流
-                if i < len(questions) - 1:  # 不是最后一个问题
-                    print("等待3秒后继续下一个问题...")
-                    time.sleep(3)
+                # # 避免API限流
+                # if i < len(questions) - 1:  # 不是最后一个问题
+                #     print("等待3秒后继续下一个问题...")
+                #     time.sleep(3)
             
             # 生成合并CSV文件
             if args.consolidated_csv and all_results:
