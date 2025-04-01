@@ -1,0 +1,13 @@
+document,question_id,question,result
+applsci-11-10979,robot_function,Robot general function 机器人一般功能,"Robots can have a variety of general functions depending on their design and purpose. Some common general functions of robots include:
+1. **Automation**: Robots can automate repetitive tasks, increasing efficiency and productivity.
+2. **Assistance**: Robots can assist humans in various tasks, such as in healthcare, elderly care, and household chores.
+3. **Manufacturing**: Robots are widely used in manufacturing processes for tasks like assembly, welding, and painting.
+4. **Inspection and Maintenance**: Robots can be used for inspecting and maintaining infrastructure, equipment, and facilities.
+5. **Exploration**: Robots are used for exploration in environments that are hazardous or inaccessible to humans, such as space or deep sea.
+6. **Education**: Robots are used in educational settings to teach programming, engineering, and other subjects.
+7. **Entertainment**: Robots can provide entertainment through interactive experiences, games, and performances.
+
+These are just a few examples of the general functions of robots, and their capabilities are continually evolving with advancements in technology."
+Towards_a_robust_robotic_assistant_for_Comprehensive_Geriatric_Assessment_procedures_updating_the_CLARC_system,robot_function,Robot general function 机器人一般功能,"Based on the provided context, the robot discussed in the document is designed to assist clinicians in performing Comprehensive Geriatric Assessment (CGA) procedures. It autonomously drives some tests and processes, saving time for the clinician to focus on more valuable activities. The robot interacts with patients through social interaction and helps them complete specific CGA tests like the Barthel test, Minimental test, and Get Up & Go test. It also has features like navigation, data collection, and communication with a cloud-based system for managing the CGA sessions."
+Psychometric_Evaluation_Supported_by_a_Social_Robot_Personality_Factors_and_Technology_Acceptance,robot_function,Robot general function 机器人一般功能,"The general function of the robot mentioned in the context is to serve as a psychometric tool for cognitive assessment. It administers cognitive tasks inspired by the Montreal Cognitive Assessment test to evaluate cognitive abilities in elderly participants. The robot interacts with users, provides instructions, records responses, and calculates scores. It aims to provide a quick and reliable screening of a person's cognitive level."

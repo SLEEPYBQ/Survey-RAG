@@ -1,0 +1,36 @@
+document,question_id,question,result
+applsci-11-10979,needs,Needs and expectations? 需求和期望？,"Based on the article provided, the research conducted aimed to analyze the behavioral characteristics of the elderly and young adults using deep learning techniques. The study focused on converting skeleton data into pose evolution images (PEIs) and training a convolutional neural network (CNN) to classify behaviors. The goal was to understand the unique behavioral characteristics of the elderly and young adults based on cognitive science. The expectations were to provide insights into how behaviors differ between these two groups, which could be valuable for developing customized services for the elderly and improving elderly care systems."
+Towards_a_robust_robotic_assistant_for_Comprehensive_Geriatric_Assessment_procedures_updating_the_CLARC_system,needs,Needs and expectations? 需求和期望？,"Based on the detailed information provided in the text, the needs and expectations for the CLARC system include:
+
+1. **Needs**:
+   - To develop a socially assistive robot for Comprehensive Geriatric Assessment procedures.
+   - To save time for clinicians by automating certain CGA tests and processes.
+   - To conduct long-term extensive evaluations to validate the acceptability and utility of the robot.
+   - To optimize opportunities for health, participation, and security for the aging population.
+   - To create personalized treatments and follow-up plans based on continuous evaluation of the patient's health.
+
+2. **Expectations**:
+   - To improve the robot's ability to interact with patients in a socially acceptable manner.
+   - To enhance the usability and social acceptability of the robot through patient profiles and feedback.
+   - To refine the software architecture for better performance and responsiveness.
+   - To conduct field trials with real patients in different scenarios to test the robot's autonomy and behavior.
+   - To integrate cloud-based software for scalability, maintenance, and data management.
+
+These needs and expectations are aimed at creating a robust and effective robotic assistant for Comprehensive Geriatric Assessment procedures."
+Psychometric_Evaluation_Supported_by_a_Social_Robot_Personality_Factors_and_Technology_Acceptance,needs,Needs and expectations? 需求和期望？,"Based on the research presented in the document, the needs and expectations related to using social robots for psychometric assessment include:
+
+1. **Quick and Reliable Screening**: The need for a tool that can provide quick and reliable screening exams for cognitive assessment.
+
+2. **Standardization and Neutrality**: The expectation that social robots can ensure test standardization and assessor neutrality in the diagnostic process.
+
+3. **Large-Scale Screenings**: The need for tools that can allow large-scale screenings outside the clinic, making assessments more accessible.
+
+4. **User Engagement**: The expectation that interactions with humanoid social robots can lead to higher engagement and satisfaction compared to other technologies.
+
+5. **Personal Characteristics Consideration**: The need to consider personal characteristics, such as personality factors and technology acceptance, when evaluating responses towards robot interactions.
+
+6. **Improved Cognitive Assessment**: The expectation that social robots can be a viable solution for psychometric assessment, especially for elderly users.
+
+7. **User Acceptance**: The need to measure user acceptance of robotic platforms and understand factors that influence it.
+
+These needs and expectations are based on the findings of the study that explored the use of social robots for cognitive assessment and the influence of personality factors and technology acceptance on the testing process."

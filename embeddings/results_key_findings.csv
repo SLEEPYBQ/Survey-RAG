@@ -1,0 +1,20 @@
+document,question_id,question,result
+applsci-11-10979,key_findings,Key findings (brief) 关键发现（简要）,"1. The study focused on analyzing the unique behavioral characteristics of elderly and young adults using deep learning techniques.
+2. Skeleton sequences from Kinect sensors were converted into pose evolution images (PEIs) for classification using a convolutional neural network (CNN).
+3. The study used explainable AI methods like Grad-CAM to understand the features contributing to the classification of behaviors.
+4. The analysis revealed differences in behavioral characteristics between the elderly and young adults, such as posture and movement patterns during activities like eating and pouring water.
+5. The method provided insights into how aging affects physical behaviors and can be useful for developing tailored services for the elderly population."
+Towards_a_robust_robotic_assistant_for_Comprehensive_Geriatric_Assessment_procedures_updating_the_CLARC_system,key_findings,Key findings (brief) 关键发现（简要）,"1. The CLARC system aims to assist clinicians in performing Comprehensive Geriatric Assessment (CGA) procedures autonomously, saving time for clinicians to focus on more valuable activities like designing care plans.
+
+2. The system successfully conducted the Barthel and Get Up & Go tests autonomously, but the Minimental test was found to be tiresome for patients and may need partial automation.
+
+3. Patients preferred using a remote control interface over voice commands for interacting with the robot during CGA tests.
+
+4. The system received positive feedback in terms of usability and acceptability, but further evaluations are planned to ensure long-term acceptance by patients.
+
+5. Improvements in the patient profile collection, cloud-based software, and cognitive architecture are planned for the next phase to enhance the system's performance and scalability."
+Psychometric_Evaluation_Supported_by_a_Social_Robot_Personality_Factors_and_Technology_Acceptance,key_findings,Key findings (brief) 关键发现（简要）,"1. The study found that Openness to experience personality trait positively influenced the performance in the robotic cognitive assessment.
+2. Anxiety was moderately correlated with supervised visuospatial capabilities, suggesting that anxiety may enhance cognitive test performance in elderly individuals.
+3. Trust was negatively correlated with attention score, indicating that individuals with high trust may not follow suggestions from the robot.
+4. Intention to use was positively correlated with delayed recall, suggesting that individuals with higher memory performance were more willing to use the system.
+5. The UTAUT questionnaire results indicated that participants had a positive perception of the robot's adaptability, sociability, and usefulness."
