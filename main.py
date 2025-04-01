@@ -109,6 +109,72 @@ def get_questions():
         {"id": "additional_info", "question": "Additional info 其他信息"}
     ]
 
+def process_question(question, embedding_paths, args, all_results=None):
+    """处理单个问题的查询并保存结果为CSV"""
+    # 查询结果
+    results = []
+    
+    # 对每个文档进行查询
+    for path in tqdm(embedding_paths, desc=f"查询 '{question['id']}'"):
+        doc_name = os.path.basename(path)
+        success, result = query_document(path, question['question'], args.api_base, args.api_key)
+        
+        if success:
+            result_item = {
+                "document": doc_name,
+                "question_id": question['id'],
+                "question": question['question'],
+                "result": result
+            }
+            results.append(result_item)
+            
+            # 如果提供了all_results字典，将结果也存到那里
+            if all_results is not None:
+                if doc_name not in all_results:
+                    all_results[doc_name] = {"document": doc_name}
+                all_results[doc_name][question['id']] = result
+        else:
+            print(f"查询 '{doc_name}' 失败: {result}")
+            # 如果提供了all_results字典，添加错误信息
+            if all_results is not None:
+                if doc_name not in all_results:
+                    all_results[doc_name] = {"document": doc_name}
+                all_results[doc_name][question['id']] = f"错误: {result}"
+    
+    # 保存结果到CSV
+    csv_path = os.path.join(args.output_dir, f"results_{question['id']}.csv")
+    
+    with open(csv_path, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['document', 'question_id', 'question', 'result']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        
+        writer.writeheader()
+        for row in results:
+            writer.writerow(row)
+    
+    print(f"已保存 '{question['id']}' 的查询结果到: {csv_path}")
+    
+    return results
+
+def save_consolidated_csv(all_results, questions, output_dir):
+    """将所有问题的结果保存到一个合并的CSV文件中"""
+    # 构建CSV的字段名（表头）
+    fieldnames = ['document'] + [q['id'] for q in questions]
+    
+    # 保存路径
+    consolidated_csv_path = os.path.join(output_dir, "all_results_consolidated.csv")
+    
+    # 将结果保存为CSV
+    with open(consolidated_csv_path, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        
+        # 写入每个文档的所有问题结果
+        for doc_name, results in all_results.items():
+            writer.writerow(results)
+    
+    print(f"\n已保存所有结果到合并CSV文件: {consolidated_csv_path}")
+
 def main():
     # 创建参数解析器
     parser = argparse.ArgumentParser(description='并行处理PDF文件并提取指定信息')
@@ -127,6 +193,8 @@ def main():
                         help='要查询的问题ID，例如"stakeholder"。如果未指定，将显示所有可用问题')
     parser.add_argument('--all_questions', action='store_true', 
                         help='查询所有问题（一次一个）并保存为单独的CSV文件')
+    parser.add_argument('--consolidated_csv', action='store_true', default=True,
+                        help='除单独的CSV外，是否还生成一个包含所有问题的合并CSV文件')
     
     # 解析参数
     args = parser.parse_args()
@@ -206,6 +274,9 @@ def main():
         
         print(f"找到 {len(embedding_paths)} 个embedding文件")
         
+        # 用于存储所有问题的查询结果，以便生成合并CSV
+        all_results = {} if args.consolidated_csv or args.all_questions else None
+        
         # 如果指定了查询单个问题
         if args.question_id and not args.all_questions:
             # 查找指定问题
@@ -220,52 +291,27 @@ def main():
                 return
             
             print(f"\n查询问题: {selected_question['question']}")
-            process_question(selected_question, embedding_paths, args)
+            process_question(selected_question, embedding_paths, args, all_results)
+            
+            # 如果只有一个问题但要求生成合并CSV，也生成一个单列的合并文件
+            if args.consolidated_csv and all_results:
+                save_consolidated_csv(all_results, [selected_question], args.output_dir)
         
         # 如果要查询所有问题
         elif args.all_questions:
             print("\n开始依次查询所有问题...")
             for i, question in enumerate(questions):
                 print(f"\n[{i+1}/{len(questions)}] 查询问题: {question['question']}")
-                process_question(question, embedding_paths, args)
+                process_question(question, embedding_paths, args, all_results)
                 
                 # 避免API限流
                 if i < len(questions) - 1:  # 不是最后一个问题
                     print("等待3秒后继续下一个问题...")
                     time.sleep(3)
-
-def process_question(question, embedding_paths, args):
-    """处理单个问题的查询并保存结果为CSV"""
-    # 查询结果
-    results = []
-    
-    # 对每个文档进行查询
-    for path in tqdm(embedding_paths, desc=f"查询 '{question['id']}'"):
-        doc_name = os.path.basename(path)
-        success, result = query_document(path, question['question'], args.api_base, args.api_key)
-        
-        if success:
-            results.append({
-                "document": doc_name,
-                "question_id": question['id'],
-                "question": question['question'],
-                "result": result
-            })
-        else:
-            print(f"查询 '{doc_name}' 失败: {result}")
-    
-    # 保存结果到CSV
-    csv_path = os.path.join(args.output_dir, f"results_{question['id']}.csv")
-    
-    with open(csv_path, 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['document', 'question_id', 'question', 'result']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        
-        writer.writeheader()
-        for row in results:
-            writer.writerow(row)
-    
-    print(f"已保存 '{question['id']}' 的查询结果到: {csv_path}")
+            
+            # 生成合并CSV文件
+            if args.consolidated_csv and all_results:
+                save_consolidated_csv(all_results, questions, args.output_dir)
 
 if __name__ == "__main__":
     main()
