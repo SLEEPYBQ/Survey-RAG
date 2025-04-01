@@ -12,171 +12,10 @@ from langchain.schema import Document
 from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 
-# 保留原有的PDF处理函数
-def extract_text_from_pdf(pdf_path):
-    """从PDF提取文本内容"""
-    try:
-        doc = textract.process(pdf_path)
-        return doc.decode('utf-8')
-    except Exception as e:
-        print(f"处理PDF时出错: {pdf_path}, 错误信息: {e}")
-        return ""
+from embedding import extract_text_from_pdf, process_single_pdf
+from retrieval import query_document
+from utils import get_questions, process_question, save_consolidated_csv
 
-def process_single_pdf(args):
-    """处理单个PDF文件并保存embedding"""
-    pdf_path, output_folder, api_base, api_key = args
-    
-    # 设置API凭证 (在每个进程中都需要设置)
-    os.environ["OPENAI_API_BASE"] = api_base
-    os.environ["OPENAI_API_KEY"] = api_key
-    
-    # 获取文件名
-    pdf_file = os.path.basename(pdf_path)
-    
-    # 提取文本
-    text = extract_text_from_pdf(pdf_path)
-    
-    if not text:
-        return pdf_file, False, "无法提取文本"
-    
-    try:
-        # 创建Document对象
-        document = Document(
-            page_content=text,
-            metadata={"source": pdf_file, "path": pdf_path}
-        )
-        
-        # 创建向量存储
-        embeddings = OpenAIEmbeddings()
-        db = FAISS.from_documents([document], embeddings)
-        
-        # 生成输出文件名（去掉.pdf后缀）
-        output_name = pdf_file.replace('.pdf', '')
-        output_path = os.path.join(output_folder, output_name)
-        
-        # 保存向量存储
-        db.save_local(output_path)
-        
-        return pdf_file, True, output_path
-    except Exception as e:
-        return pdf_file, False, str(e)
-
-def query_document(embedding_path, query, api_base, api_key):
-    """使用LLM查询文档内容"""
-    # 设置API凭证
-    os.environ["OPENAI_API_BASE"] = api_base
-    os.environ["OPENAI_API_KEY"] = api_key
-    
-    try:
-        # 加载embedding
-        embeddings = OpenAIEmbeddings()
-        db = FAISS.load_local(embedding_path, embeddings)
-        
-        # 创建LLM模型和检索链
-        llm_model = ChatOpenAI(temperature=0.3, model="gpt-3.5-turbo")
-        qa = ConversationalRetrievalChain.from_llm(llm_model, db.as_retriever())
-        
-        # 执行查询
-        result = qa({"question": query, "chat_history": []})
-        return True, result['answer']
-    except Exception as e:
-        return False, str(e)
-
-# 定义简洁回答指令变量
-concise_instruction = "Please provide a concise answer without additional explanations. If the information is not available, simply respond with 'N/A'. "
-
-# 定义所有问题列表
-def get_questions():
-    return [
-        {"id": "stakeholder", "question": concise_instruction + "What are the involved stakeholders? For example: older adults, caregivers, domain experts, solution providers, etc."},
-        {"id": "sample_size", "question": concise_instruction + "What is the sample size of the study?"},
-        {"id": "country", "question": concise_instruction + "In which country or countries were the participants located?"},
-        {"id": "demographic", "question": concise_instruction + "What are the demographics of the participants in the study?"},
-        {"id": "impairment", "question": concise_instruction + "What cognitive or physical impairments do the participants have, if any?"},
-        {"id": "needs", "question": concise_instruction + "What needs are addressed by the robot? Or what are the needs of the stakeholders? For example: chatting, reminding, daily routine assistance, exercise guidance, etc."},
-        {"id": "context", "question": concise_instruction + "What is the context of the study? For example, what type of community, level of care facility, or environment are the older adults in?"},
-        {"id": "care_process", "question": concise_instruction + "What is the process of care described in the study? Is it early stage or long-term care? Is it first contact?"},
-        {"id": "methodology", "question": concise_instruction + "What methodology was used in this paper? For example: focus group, one-to-one interview, questionnaire, experiment, etc."},
-        {"id": "care_type", "question": concise_instruction + "What type of care is provided or discussed in the study?"},
-        {"id": "robot_type", "question": concise_instruction + "Which type of robot is used in the study? For example: humanoid, machine-like, animal-like, etc."},
-        {"id": "robot_name", "question": concise_instruction + "What is the name of the robot used in the study?"},
-        {"id": "robot_function", "question": concise_instruction + "What is the general function of the robot in the study?"},
-        {"id": "facilitating_functions", "question": concise_instruction + "What specific functions of the robot facilitate care or assistance?"},
-        {"id": "inhibitory_functions", "question": concise_instruction + "What specific functions of the robot inhibit or hinder care or assistance?"},
-        {"id": "stakeholder_facilitating", "question": concise_instruction + "What characteristics of the stakeholders facilitate the use of the robot?"},
-        {"id": "stakeholder_inhibitory", "question": concise_instruction + "What characteristics of the stakeholders inhibit or hinder the use of the robot?"},
-        {"id": "engagement", "question": concise_instruction + "How is user engagement with the robot described or measured in the study? If not, response should be 'N/A'."},
-        {"id": "acceptance", "question": concise_instruction + "How is user acceptance of the robot described or measured in the study? If not, response should be 'N/A'."},
-        {"id": "trust", "question": concise_instruction + "How is trust in the robot addressed or measured in the study? If not, response should be 'N/A'."},
-        {"id": "key_findings", "question": concise_instruction + "What are the key findings of the study?"},
-        {"id": "additional_info", "question": concise_instruction + "What additional information is relevant from this study that doesn't fit into the categories above?"}
-    ]
-
-def process_question(question, embedding_paths, args, all_results=None):
-    """处理单个问题的查询并保存结果为CSV"""
-    # 查询结果
-    results = []
-    
-    # 对每个文档进行查询
-    for path in tqdm(embedding_paths, desc=f"查询 '{question['id']}'"):
-        doc_name = os.path.basename(path)
-        success, result = query_document(path, question['question'], args.api_base, args.api_key)
-        
-        if success:
-            result_item = {
-                "document": doc_name,
-                "question_id": question['id'],
-                "question": question['question'],
-                "result": result
-            }
-            results.append(result_item)
-            
-            # 如果提供了all_results字典，将结果也存到那里
-            if all_results is not None:
-                if doc_name not in all_results:
-                    all_results[doc_name] = {"document": doc_name}
-                all_results[doc_name][question['id']] = result
-        else:
-            print(f"查询 '{doc_name}' 失败: {result}")
-            # 如果提供了all_results字典，添加错误信息
-            if all_results is not None:
-                if doc_name not in all_results:
-                    all_results[doc_name] = {"document": doc_name}
-                all_results[doc_name][question['id']] = f"错误: {result}"
-    
-    # 保存结果到CSV
-    csv_path = os.path.join(args.output_dir, f"results_{question['id']}.csv")
-    
-    with open(csv_path, 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['document', 'question_id', 'question', 'result']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        
-        writer.writeheader()
-        for row in results:
-            writer.writerow(row)
-    
-    print(f"已保存 '{question['id']}' 的查询结果到: {csv_path}")
-    
-    return results
-
-def save_consolidated_csv(all_results, questions, output_dir):
-    """将所有问题的结果保存到一个合并的CSV文件中"""
-    # 构建CSV的字段名（表头）
-    fieldnames = ['document'] + [q['id'] for q in questions]
-    
-    # 保存路径
-    consolidated_csv_path = os.path.join(output_dir, "all_results_consolidated.csv")
-    
-    # 将结果保存为CSV
-    with open(consolidated_csv_path, 'w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        
-        # 写入每个文档的所有问题结果
-        for doc_name, results in all_results.items():
-            writer.writerow(results)
-    
-    print(f"\n已保存所有结果到合并CSV文件: {consolidated_csv_path}")
 
 def main():
     # 创建参数解析器
@@ -185,8 +24,9 @@ def main():
     # 添加基本参数
     parser.add_argument('--input_dir', type=str, required=True, help='PDF文件的输入目录')
     parser.add_argument('--output_dir', type=str, required=True, help='Embedding和结果的输出目录')
+    # --api_base和--api_key设置自己的, 我使用的是CloseAI的中转API
     parser.add_argument('--api_base', type=str, default="https://api.openai-proxy.org/v1", help='OpenAI API基础URL')
-    parser.add_argument('--api_key', type=str, default="sk-lTSVS2yip8kbDNpYj5GfwmW5RFJOOrf33zX3gh55xZ2KSWlH", help='OpenAI API密钥')
+    parser.add_argument('--api_key', type=str, default="<YOUR-API-KEY>", help='OpenAI API密钥')
     parser.add_argument('--max_workers', type=int, default=multiprocessing.cpu_count(), help='最大并行工作进程数')
     
     # 添加查询相关参数
@@ -306,11 +146,6 @@ def main():
             for i, question in enumerate(questions):
                 print(f"\n[{i+1}/{len(questions)}] 查询问题: {question['question']}")
                 process_question(question, embedding_paths, args, all_results)
-                
-                # # 避免API限流
-                # if i < len(questions) - 1:  # 不是最后一个问题
-                #     print("等待3秒后继续下一个问题...")
-                #     time.sleep(3)
             
             # 生成合并CSV文件
             if args.consolidated_csv and all_results:
