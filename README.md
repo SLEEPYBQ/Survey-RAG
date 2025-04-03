@@ -24,6 +24,23 @@ Survey-RAG 是一个用于处理学术调查PDF文档并使用大语言模型进
 - `langchain.schema`：LangChain文档模式
 - `langchain.chains`：检索链
 
+## How it works?
+
+Survey-RAG 主要通过以下几个步骤进行操作：
+
+1. 它首先处理指定文件夹中的 PDF 文档，提取文本并使用 Hugging Face Transformers 库将其拆分成可管理的块。
+
+2. 然后，使用 LangChain 库通过默认的 OpenAI 嵌入模型（text-embedding-ada-002）对每个文本块进行嵌入。
+
+3. 这些嵌入被存储在 FAISS 索引中，提供了一种紧凑高效的存储方式。
+
+4. 最后，查询接口允许从已索引的数据中检索相关信息。该应用程序会提取并显示最相关的文本块。
+
+![Untitled-2023-06-16-1537](https://github.com/raghavan/PdfGptIndexer/assets/131585/2e71dd82-bf4f-44db-b1ae-908cbb465deb)
+
+
+
+
 ## 安装
 
 1. 克隆此仓库：
@@ -99,9 +116,6 @@ python main.py --output_dir /path/to/output --api_key your_api_key --mode query 
 - 每个问题的单独CSV文件：`results_[question_id].csv`
 - 合并所有问题的综合报告：`all_results_consolidated.csv`
 
-## 注意事项
-
-- 确保您的PDF文件可读并且包含有意义的文本
-- 处理大型PDF文件可能需要更多内存和处理时间
-- API请求可能受到OpenAI速率限制的影响
-
+## Acknowledgements
+该项目受到了以下项目的启发,并复用其部分代码： 
+1. [PdfGptIndexer](https://github.com/raghavan/PdfGptIndexer/tree/main)

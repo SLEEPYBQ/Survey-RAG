@@ -37,9 +37,9 @@ def get_questions():
         {"id": "inhibitory_functions", "question": concise_instruction + "What specific functions of the robot inhibit or hinder care or assistance?"},
         {"id": "stakeholder_facilitating", "question": concise_instruction + "What characteristics of the stakeholders facilitate the use of the robot?"},
         {"id": "stakeholder_inhibitory", "question": concise_instruction + "What characteristics of the stakeholders inhibit or hinder the use of the robot?"},
-        {"id": "engagement", "question": concise_instruction + "How is user engagement with the robot described or measured in the study? If not, response should be 'N/A'."},
-        {"id": "acceptance", "question": concise_instruction + "How is user acceptance of the robot described or measured in the study? If not, response should be 'N/A'."},
-        {"id": "trust", "question": concise_instruction + "How is trust in the robot addressed or measured in the study? If not, response should be 'N/A'."},
+        {"id": "engagement", "question": "How is user engagement with the robot described or measured in the study? If applicable, include the measurement results (e.g., whether engagement increased or decreased). If not, response should be 'N/A'."},
+        {"id": "acceptance", "question": "How is user acceptance of the robot described or measured in the study? If applicable, include the measurement results (e.g., whether acceptance increased or decreased). If not, response should be 'N/A'."},
+        {"id": "trust", "question": "How is trust in the robot addressed or measured in the study? If applicable, include the measurement results (e.g., whether trust increased or decreased). If not, response should be 'N/A'."},
         {"id": "key_findings", "question": concise_instruction + "What are the key findings of the study?"},
         {"id": "additional_info", "question": concise_instruction + "What additional information is relevant from this study that doesn't fit into the categories above?"}
     ]
