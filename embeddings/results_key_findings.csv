@@ -1,15 +1,1 @@
 document,question_id,question,result
-applsci-11-10979,key_findings,"Please provide a concise answer without additional explanations. If the information is not available, simply respond with 'N/A'. What are the key findings of the study?","The key findings of the study include:
-1. Analysis of behavioral characteristics using explainable artificial intelligence.
-2. Conversion of skeleton data into pose evolution images for classification.
-3. Use of deep learning to distinguish between behavioral characteristics of elderly and young adults.
-4. Comparison of skeleton-heatmaps to understand unique behavioral characteristics.
-5. Insights into differences in behaviors such as eating food with a fork and pouring water into a cup between elderly and young adults."
-Towards_a_robust_robotic_assistant_for_Comprehensive_Geriatric_Assessment_procedures_updating_the_CLARC_system,key_findings,"Please provide a concise answer without additional explanations. If the information is not available, simply respond with 'N/A'. What are the key findings of the study?","The key findings of the study on the CLARC system for Comprehensive Geriatric Assessment procedures include the successful performance of CGA tests, positive evaluations of robot autonomy and behavior, and good usability of the interface for clinicians. The study also highlighted the importance of patient acceptance and interaction with the robot."
-Psychometric_Evaluation_Supported_by_a_Social_Robot_Personality_Factors_and_Technology_Acceptance,key_findings,"Please provide a concise answer without additional explanations. If the information is not available, simply respond with 'N/A'. What are the key findings of the study?","The key findings of the study are:
-1. Openness to experience positively influences the automatic scoring in the robotic cognitive assessment.
-2. Anxiety correlates moderately with supervised visuospatial capabilities.
-3. Trust has a negative correlation with supervised attention scores.
-4. Intention to use correlates with supervised delayed recall.
-5. The UTAUT questionnaire results show positive perceptions of adaptability, sociability, and usefulness of the robot.
-6. Linear regression analysis confirms that Openness to experience significantly contributes to the automatic robotic score."

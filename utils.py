@@ -7,6 +7,7 @@ from concurrent.futures import ProcessPoolExecutor
 import textract
 from tqdm import tqdm
 from langchain_openai import OpenAIEmbeddings
+from langchain_openai import AzureOpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
 from langchain_openai import ChatOpenAI
@@ -48,11 +49,17 @@ def process_question(question, embedding_paths, args, all_results=None):
     """处理单个问题的查询并保存结果为CSV"""
     # 查询结果
     results = []
+
+    api_type = args.api_type
     
     # 对每个文档进行查询
     for path in tqdm(embedding_paths, desc=f"查询 '{question['id']}'"):
         doc_name = os.path.basename(path)
-        success, result = query_document(path, question['question'], args.api_base, args.api_key)
+        if api_type == 'openai':
+            success, result = query_document(path, question['question'], api_type, "2023-05-15", args.api_base, args.api_key)
+        elif api_type == 'azure':
+            success, result = query_document(path, question['question'], api_type, args.api_version, args.api_endpoint, args.api_key_azure)
+
         
         if success:
             result_item = {

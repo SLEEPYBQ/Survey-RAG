@@ -1,6 +1,7 @@
 import textract
 import os
 from langchain_openai import OpenAIEmbeddings
+from langchain_openai import AzureOpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
@@ -18,11 +19,17 @@ def extract_text_from_pdf(pdf_path):
 
 def process_single_pdf(args):
     """处理单个PDF文件并保存embedding"""
-    pdf_path, output_folder, api_base, api_key = args
+    pdf_path, output_folder, api_type, api_base, api_key, api_version, api_endpoint, api_key_azure  = args
+
     
-    # 设置API凭证 (在每个进程中都需要设置)
-    os.environ["OPENAI_API_BASE"] = api_base
-    os.environ["OPENAI_API_KEY"] = api_key
+    if api_type == 'openai':
+        os.environ["OPENAI_API_BASE"] = api_base
+        os.environ["OPENAI_API_KEY"] = api_key
+    elif api_type == 'azure':
+        os.environ["OPENAI_API_VERSION"] = api_version
+        os.environ["AZURE_OPENAI_ENDPOINT"] = api_endpoint
+        os.environ["AZURE_OPENAI_API_KEY"] = api_key_azure
+    
     
     # 获取文件名
     pdf_file = os.path.basename(pdf_path)
@@ -41,7 +48,11 @@ def process_single_pdf(args):
         )
         
         # 创建向量存储
-        embeddings = OpenAIEmbeddings()
+        if api_type == 'openai':
+            embeddings = OpenAIEmbeddings()
+        elif api_type == 'azure':
+            embeddings = AzureOpenAIEmbeddings()
+        # embeddings = OpenAIEmbeddings()
         db = FAISS.from_documents([document], embeddings)
         
         # 生成输出文件名（去掉.pdf后缀）

@@ -24,9 +24,22 @@ def main():
     # 添加基本参数
     parser.add_argument('--input_dir', type=str, required=True, help='PDF文件的输入目录')
     parser.add_argument('--output_dir', type=str, required=True, help='Embedding和结果的输出目录')
-    # --api_base和--api_key设置自己的, 我使用的是CloseAI的中转API
+
+
+    ## IMPORTANT!!!!!!!!!!!!
+    ## HKUST ITSC的Azure API调用方式与OpenAI的API调用方式不同, 因此设置两组参数
+    parser.add_argument('--api_type', type=str, choices=['openai', 'azure'], default='openai',
+                        help='API类型: openai或azure')
+    ## OpenAI
     parser.add_argument('--api_base', type=str, default="https://api.openai-proxy.org/v1", help='OpenAI API基础URL')
     parser.add_argument('--api_key', type=str, default="<YOUR-API-KEY>", help='OpenAI API密钥')
+
+    ## HKUST ITSC
+    parser.add_argument('--api_version', type=str, default="2023-05-15", help='OpenAI API版本')
+    parser.add_argument('--api_endpoint', type=str, default="https://hkust.azure-api.net", help='OpenAI API类型')
+    parser.add_argument('--api_key_azure', type=str, default="<YOUR-API-KEY>", help='OpenAI API密钥')
+    
+    
     parser.add_argument('--max_workers', type=int, default=multiprocessing.cpu_count(), help='最大并行工作进程数')
     
     # 添加查询相关参数
@@ -70,9 +83,10 @@ def main():
             return
         
         print(f"找到 {len(pdf_files)} 个PDF文件")
+
         
         # 准备并行处理参数
-        process_args = [(pdf_path, args.output_dir, args.api_base, args.api_key) for pdf_path in pdf_files]
+        process_args = [(pdf_path, args.output_dir, args.api_type, args.api_base, args.api_key, args.api_version, args.api_endpoint, args.api_key_azure) for pdf_path in pdf_files]
         
         # 并行处理PDF文件
         start_time = time.time()

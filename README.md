@@ -76,8 +76,26 @@ python main.py --input_dir /path/to/pdfs --output_dir /path/to/output --api_key 
 - `--question_id`：要查询的特定问题ID
 - `--all_questions`：查询所有预定义问题
 - `--consolidated_csv`：生成包含所有问题结果的综合CSV文件（默认开启）
+- `--api_type`：OpenAI API类型, 专用于HKUST ITSC Azure（需要选择是"openai"还是"azure"）
+- `--api_version`：OpenAI API版本, 专用于HKUST ITSC Azure（默认为"2023-05-15"）
+- `--api_endpoint`：OpenAI API端点, 专用于HKUST ITSC Azure（默认为"https://hkust.azure-api.net"）
+- `--api_key_azure'`：HKUST ITSC Azure的API Key
+
 
 ### 运行模式示例
+
+#### 区分openai和HKUST ITSC Azure
+key可以直接在main.py硬编码, <YOUR-API-KEY>处
+
+1. openai
+```bash
+python main.py --input_dir ./pdfs --output_dir ./embeddings --mode both --all_questions --api_type openai
+```
+2. HKUST ITSC Azure
+
+```bash
+python main.py --input_dir ./pdfs --output_dir ./embeddings --mode both --all_questions --api_type azure
+```
 
 1. 仅处理PDF并生成嵌入：
 
