@@ -15,73 +15,273 @@ from langchain.chains import ConversationalRetrievalChain
 
 from retrieval import query_document
 
-# 定义简洁回答指令变量
-concise_instruction = "Please provide a concise answer without additional explanations. If the information is not available, simply respond with 'N/A'. "
 
-# 定义所有问题列表
+# 修改简洁回答指令变量
+concise_instruction = """Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations."""
+
+# ...existing code...
 def get_questions():
     return [
-        {"id": "stakeholder", "question": concise_instruction + "What are the involved stakeholders? For example: older adults, caregivers, domain experts, solution providers, etc."},
-        {"id": "sample_size", "question": concise_instruction + "What is the sample size of the study?"},
-        {"id": "country", "question": concise_instruction + "In which country or countries were the participants located?"},
-        {"id": "demographic", "question": concise_instruction + "What are the demographics of the participants in the study?"},
-        {"id": "impairment", "question": concise_instruction + "What cognitive or physical impairments do the participants have, if any?"},
-        {"id": "needs", "question": concise_instruction + "What needs are addressed by the robot? Or what are the needs of the stakeholders? For example: chatting, reminding, daily routine assistance, exercise guidance, etc."},
-        {"id": "context", "question": concise_instruction + "What is the context of the study? For example, what type of community, level of care facility, or environment are the older adults in?"},
-        {"id": "care_process", "question": concise_instruction + "What is the process of care described in the study? Is it early stage or long-term care? Is it first contact?"},
-        {"id": "methodology", "question": concise_instruction + "What methodology was used in this paper? For example: focus group, one-to-one interview, questionnaire, experiment, etc."},
-        {"id": "care_type", "question": concise_instruction + "What type of care is provided or discussed in the study?"},
-        {"id": "robot_type", "question": concise_instruction + "Which type of robot is used in the study? For example: humanoid, machine-like, animal-like, etc."},
-        {"id": "robot_name", "question": concise_instruction + "What is the name of the robot used in the study?"},
-        {"id": "robot_function", "question": concise_instruction + "What is the general function of the robot in the study?"},
-        {"id": "facilitating_functions", "question": concise_instruction + "What specific functions of the robot facilitate care or assistance?"},
-        {"id": "inhibitory_functions", "question": concise_instruction + "What specific functions of the robot inhibit or hinder care or assistance?"},
-        {"id": "stakeholder_facilitating", "question": concise_instruction + "What characteristics of the stakeholders facilitate the use of the robot?"},
-        {"id": "stakeholder_inhibitory", "question": concise_instruction + "What characteristics of the stakeholders inhibit or hinder the use of the robot?"},
-        {"id": "engagement", "question": "How is user engagement with the robot described or measured in the study? If applicable, include the measurement results (e.g., whether engagement increased or decreased). If not, response should be 'N/A'."},
-        {"id": "acceptance", "question": "How is user acceptance of the robot described or measured in the study? If applicable, include the measurement results (e.g., whether acceptance increased or decreased). If not, response should be 'N/A'."},
-        {"id": "trust", "question": "How is trust in the robot addressed or measured in the study? If applicable, include the measurement results (e.g., whether trust increased or decreased). If not, response should be 'N/A'."},
-        {"id": "key_findings", "question": concise_instruction + "What are the key findings of the study?"},
-        {"id": "additional_info", "question": concise_instruction + "What additional information is relevant from this study that doesn't fit into the categories above?"}
+        {
+            "id": "involved_stakeholder",
+            "question": (
+                "What are the involved stakeholders (e.g., elderly people, caregivers, technical solution providers) in the study? "
+                "Stakeholders must meet one of the following criteria: "
+                "1. Participate in experiments or studies; "
+                "2. Not participate directly but expressed opinions or perspectives (e.g., via interviews, focus groups); "
+                "3. Play a role in shaping the findings or conclusions of the paper. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "sample_size",
+            "question": (
+                "What is the sample size of the study? For example, if 100 people participated and only 90 consented to data collection, the sample size is 90. "
+                "For multi-study papers, specify the sample size for each study group. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "country",
+            "question": (
+                "What is the country or region of the participants as explicitly stated in the paper (do not infer from the authors’ affiliations)? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "age",
+            "question": (
+                "What age-related information is provided in the study (e.g., age range, mean, or median age)? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "gender",
+            "question": (
+                "What gender-related information is reported in the study? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "demographic_background",
+            "question": (
+                "What demographic background information is reported? (For example, socioeconomic status, educational level, and living context for elderly people or working context for caregivers; also include any additional details such as language proficiency, professional background, or technology literacy if mentioned.) "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "cognitive_and_physical_impairment",
+            "question": (
+                "What cognitive and physical impairments are described among the elderly participants? "
+                "If standardized measurement tools were used, report the specific scores and the name of the scale; if qualitative terms (e.g., 'mild', 'severe') were used, report them accordingly. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "needs_and_expectations",
+            "question": (
+                "What are the explicitly stated or inferred needs and expectations of users, primarily elderly people and caregivers? "
+                "This includes both directly expressed needs and user preferences accompanied by explanatory comments during interviews or post-trial reflections. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "application_context",
+            "question": (
+                "What is the envisioned application context for the robot as explicitly mentioned in the paper? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "process_of_the_care",
+            "question": (
+                "What information is provided about the duration and stage of the care process? "
+                "Specify whether the study involved a first encounter, short-term use, or long-term deployment, and include session duration and frequency if available. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "methodology",
+            "question": (
+                "What research methodology was used in the study (e.g., qualitative interviews, quantitative surveys, randomized controlled trials)? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "Care_type",
+            "question": (
+                "What type of care is the study focused on?"
+                + concise_instruction
+            )
+        },
+        {
+            "id": "robot_type",
+            "question": (
+                "What type of robot is used in the study? (If the paper uses terms like 'human-like' or 'animal-like', use those directly; otherwise, provide a short description of the robot’s appearance.) "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "robot_name",
+            "question": (
+                "What is the name of the robot used in the study? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "design_goal",
+            "question": (
+                "What design goals were set by the solution provider when designing the robot or its interaction functions? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "robot_concern_function",
+            "question": (
+                "What functionalities of the robot were demonstrated, deployed, or introduced to users during the study? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "facilitating_functions",
+            "question": (
+                "What specific robot functions or features are reported to enhance the user experience (i.e., positive features)? "
+                "Please provide brief explanations for why these features are considered beneficial. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "inhibitory_functions",
+            "question": (
+                "What specific robot functions or features are reported to hinder the user experience (i.e., negative features)? "
+                "Please provide brief explanations for why these features are considered detrimental. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "stakeholder_facilitating_characteristics",
+            "question": (
+                "What characteristics of the stakeholders are associated with better robot use, acceptance, or trust? "
+                "Include brief explanations where available. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "stakeholder_inhibitory_characteristics",
+            "question": (
+                "What characteristics of the stakeholders are associated with reduced robot use, lower acceptance, or lower trust? "
+                "Include brief explanations where available. "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "engagement",
+            "question": (
+                "What evaluation of user engagement in the robot is reported in the study? "
+                "This may include quantitative measurements (e.g., rating scales) or qualitative descriptions (e.g., 'high engagement', 'low acceptance', 'gradual trust development'). "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "acceptance",
+            "question": (
+                "What evaluation of user acceptance trust in the robot is reported in the study? "
+                "This may include quantitative measurements (e.g., rating scales) or qualitative descriptions (e.g., 'high engagement', 'low acceptance', 'gradual trust development'). "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "trust",
+            "question": (
+                "What evaluation of user trust in the robot is reported in the study? "
+                "This may include quantitative measurements (e.g., rating scales) or qualitative descriptions (e.g., 'high engagement', 'low acceptance', 'gradual trust development'). "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "key_findings",
+            "question": (
+                "What are the key findings of the study, as typically summarized in the conclusion or discussion section? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "additional_info",
+            "question": (
+                "What additional information is provided about the study, such as limitations or other relevant details? "
+                + concise_instruction
+            )
+        },
+        {
+            "id": "testing_context",
+            "question": (
+                "What is the testing context of the study? (For example, was the test conducted in a lab, care home, hospital, private residence, or another setting?) "
+                + concise_instruction
+            )
+        }
     ]
 
-def process_question(question, embedding_paths, args, all_results=None):
-    """处理单个问题的查询并保存结果为CSV"""
-    # 查询结果
-    results = []
 
+def query_document_wrapper(args):
+    """用于并行处理的查询文档包装器函数"""
+    path, question, api_type, api_version, api_base, api_key, doc_name = args
+    try:
+        success, result = query_document(path, question, api_type, api_version, api_base, api_key)
+        return doc_name, success, result
+    except Exception as e:
+        return doc_name, False, str(e)
+
+def process_question(question, embedding_paths, args, all_results=None):
+    """处理单个问题的查询并保存结果为CSV，使用并行处理"""
     api_type = args.api_type
     
-    # 对每个文档进行查询
-    for path in tqdm(embedding_paths, desc=f"查询 '{question['id']}'"):
+    # 准备用于并行处理的参数
+    query_args = []
+    for path in embedding_paths:
         doc_name = os.path.basename(path)
         if api_type == 'openai':
-            success, result = query_document(path, question['question'], api_type, "2023-05-15", args.api_base, args.api_key)
+            query_args.append((path, question['question'], api_type, "2023-05-15", args.api_base, args.api_key, doc_name))
         elif api_type == 'azure':
-            success, result = query_document(path, question['question'], api_type, args.api_version, args.api_endpoint, args.api_key_azure)
-
-        
-        if success:
-            result_item = {
-                "document": doc_name,
-                "question_id": question['id'],
-                "question": question['question'],
-                "result": result
-            }
-            results.append(result_item)
-            
-            # 如果提供了all_results字典，将结果也存到那里
-            if all_results is not None:
-                if doc_name not in all_results:
-                    all_results[doc_name] = {"document": doc_name}
-                all_results[doc_name][question['id']] = result
-        else:
-            print(f"查询 '{doc_name}' 失败: {result}")
-            # 如果提供了all_results字典，添加错误信息
-            if all_results is not None:
-                if doc_name not in all_results:
-                    all_results[doc_name] = {"document": doc_name}
-                all_results[doc_name][question['id']] = f"错误: {result}"
+            query_args.append((path, question['question'], api_type, args.api_version, args.api_endpoint, args.api_key_azure, doc_name))
+    
+    # 查询结果
+    results = []
+    
+    # 并行执行查询
+    print(f"使用 {args.max_workers} 个工作进程并行查询 '{question['id']}'...")
+    with ProcessPoolExecutor(max_workers=args.max_workers) as executor:
+        for doc_name, success, result in tqdm(
+            executor.map(query_document_wrapper, query_args), 
+            total=len(query_args), 
+            desc=f"查询 '{question['id']}'"
+        ):
+            if success:
+                result_item = {
+                    "document": doc_name,
+                    "question_id": question['id'],
+                    "question": question['question'],
+                    "result": result
+                }
+                results.append(result_item)
+                
+                # 如果提供了all_results字典，将结果也存到那里
+                if all_results is not None:
+                    if doc_name not in all_results:
+                        all_results[doc_name] = {"document": doc_name}
+                    all_results[doc_name][question['id']] = result
+            else:
+                print(f"查询 '{doc_name}' 失败: {result}")
+                # 如果提供了all_results字典，添加错误信息
+                if all_results is not None:
+                    if doc_name not in all_results:
+                        all_results[doc_name] = {"document": doc_name}
+                    all_results[doc_name][question['id']] = f"错误: {result}"
     
     # 保存结果到CSV
     csv_path = os.path.join(args.output_dir, f"results_{question['id']}.csv")

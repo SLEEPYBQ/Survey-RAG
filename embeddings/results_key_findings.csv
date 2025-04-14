@@ -1,1 +1,37 @@
 document,question_id,question,result
+552_a framework for service robots in smart home an efficient solution for domestic healthcare,key_findings,"What are the key findings of the study, as typically summarized in the conclusion or discussion section? Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","The framework provides software tools that enhance the efficiency of robots and smart environments in domestic healthcare applications by addressing uncertainty in context data and the dynamism of the environment.
+
+Source: ""Our framework provides software tools that make robots and smart environments more relevant in real housings. By supporting the uncertainty of context data and the dynamism of the environment, robots and smart environments can achieve more effectively their purposes in domestic healthcare applications."""
+549_A_companion_robot_for_daily_care_of_elders_based_on_homeostasis,key_findings,"What are the key findings of the study, as typically summarized in the conclusion or discussion section? Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","[The study demonstrates that the homeostasis model implemented on the Pepper robot can effectively assist in elder care, achieving a human satisfaction rate of about 94% and a robot secure rate of about 98%. The model is capable of recognizing faces, answering questions, and tracking repetitive utterances, which is particularly beneficial for dementia patients.]
+
+Source: [“Experiment result shows a promising performance after learning, reaching about 94% human satisfaction rate and about 98% robot secure rate, which means the model could effectively satisfy the human needs according to different situation with its own status stabilized.”]"
+557_enrichme perception and interaction of an assistive robot for the elderly at home,key_findings,"What are the key findings of the study, as typically summarized in the conclusion or discussion section? Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","The study found that the ENRICHME robot effectively improved the nutritional status of elderly users, enhanced cognitive engagement through various games, and provided social support, thereby reducing feelings of loneliness. Participants appreciated the robot's functionalities and customization, indicating a positive impact on their daily lives.
+
+Source: ""Although the emphasis of this paper is on the enabling technological innovations of our assistive robot, future work should look at opportune methodologies to evaluate the original expectations and the actual experiences of our elderly users... the participants were happy with the robot customization and interaction capabilities."""
+556_pilot and feasibility study on elderly support services using communicative robots and monitoring sensors integrated with cloud robotics,key_findings,"What are the key findings of the study, as typically summarized in the conclusion or discussion section? Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","The study suggests that communicative robots can stimulate elderly individuals to activate communication links, reduce the burden on nursing care workers during night shifts, improve the quality of nursing care work through automatic recording of vital information, prevent deterioration of activities of daily living, and that care professionals gradually accepted the robots as assistants.
+
+Source: ""The study results suggest the following. First, communicative robots can stimulate elderly individuals to activate a communication link with others... Sixth, also in this study, care professionals were initially not so certain about the robot's capabilities. However, they gradually began to accept the robots as their assistants..."""

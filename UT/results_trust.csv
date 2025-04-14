@@ -1,0 +1,10 @@
+document,question_id,question,result
+3640794.3665581,trust,"What evaluation of user trust in the robot is reported in the study? This may include quantitative measurements (e.g., rating scales) or qualitative descriptions (e.g., 'high engagement', 'low acceptance', 'gradual trust development'). Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","The study reports quantitative measurements of user trust in the robot using a Likert scale ranging from 1 (not at all trustworthy) to 5 (extremely trustworthy).
+
+Source: ""Participants were presented with static faces and corresponding speech recordings and were asked to provide their judgments on the perceived trustworthiness of the face and voice using a Likert scale ranging from 1 (not at all trustworthy) to 5 (extremely trustworthy)."""

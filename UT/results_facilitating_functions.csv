@@ -1,0 +1,10 @@
+document,question_id,question,result
+3640794.3665581,facilitating_functions,"What specific robot functions or features are reported to enhance the user experience (i.e., positive features)? Please provide brief explanations for why these features are considered beneficial. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","Positive features that enhance the user experience include warmth, emotional stability, and sociability conveyed through visual cues such as facial expressions, as well as auditory cues like speaking rate and intonation. These features are beneficial because they foster higher levels of trust and engagement among users.
+
+Source: ""Interfaces that effectively convey warmth, emotional stability, and sociability through visual cues such as facial expressions, as well as auditory cues such as speaking rate and intonation, are likely to foster higher levels of trust and engagement among users."""

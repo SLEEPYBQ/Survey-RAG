@@ -1,0 +1,27 @@
+# Core dependencies
+langchain==0.1.8
+langchain-community==0.0.21
+langchain-core==0.1.53
+langchain-openai==0.1.7
+
+# OpenAI
+openai==1.56.0
+tiktoken==0.9.0
+
+# Vector database
+faiss-cpu==1.10.0
+
+# Document processing
+textract==1.6.5
+pypdf==5.4.0
+
+# Data processing
+pandas==2.0.3
+tqdm==4.66.4
+
+# Utilities
+numpy==1.26.4
+requests==2.31.0
+
+# Azure OpenAI (if needed)
+# No specific package required as it's handled by langchain-openai

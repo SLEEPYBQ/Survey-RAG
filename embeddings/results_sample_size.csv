@@ -1,1 +1,37 @@
 document,question_id,question,result
+552_a framework for service robots in smart home an efficient solution for domestic healthcare,sample_size,"What is the sample size of the study? For example, if 100 people participated and only 90 consented to data collection, the sample size is 90. For multi-study papers, specify the sample size for each study group. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","N/A
+
+Source: ""The authors declare that they obtained a written informed consent from the patients and/or volunteers included in the article."""
+549_A_companion_robot_for_daily_care_of_elders_based_on_homeostasis,sample_size,"What is the sample size of the study? For example, if 100 people participated and only 90 consented to data collection, the sample size is 90. For multi-study papers, specify the sample size for each study group. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","N/A
+
+Source: N/A"
+557_enrichme perception and interaction of an assistive robot for the elderly at home,sample_size,"What is the sample size of the study? For example, if 100 people participated and only 90 consented to data collection, the sample size is 90. For multi-study papers, specify the sample size for each study group. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","N/A
+
+Source: ""the second participant’s house between the 15th of January and the 11th of March in 2018."""
+556_pilot and feasibility study on elderly support services using communicative robots and monitoring sensors integrated with cloud robotics,sample_size,"What is the sample size of the study? For example, if 100 people participated and only 90 consented to data collection, the sample size is 90. For multi-study papers, specify the sample size for each study group. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","Sample size: 6 (2 elderly patients and 4 care workers)
+
+Source: ""This pilot before-after trials using 2 volunteer elderly people with mild dementia and 4 care workers as study participants was conducted from April to June 2015."""

@@ -1,1 +1,53 @@
 document,question_id,question,result
+552_a framework for service robots in smart home an efficient solution for domestic healthcare,facilitating_functions,"What specific robot functions or features are reported to enhance the user experience (i.e., positive features)? Please provide brief explanations for why these features are considered beneficial. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","[N/A]
+
+Source: [N/A]"
+549_A_companion_robot_for_daily_care_of_elders_based_on_homeostasis,facilitating_functions,"What specific robot functions or features are reported to enhance the user experience (i.e., positive features)? Please provide brief explanations for why these features are considered beneficial. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","1. Recognizing faces and greeting users: This feature allows the robot to create a more personalized interaction, making users feel acknowledged and valued.
+
+2. Answering questions: The robot can respond to inquiries such as ""Where is my child?"" or ""When should I take the pill?"", providing practical assistance and reducing anxiety for users.
+
+3. Tracking repetitive utterances: This function helps to identify potential cognitive issues, allowing the robot to calm the user if needed, thus enhancing emotional support.
+
+4. Providing actions like greetings, conversations, and schedule reminders: These actions contribute to social interaction and help users stay organized, improving their overall well-being.
+
+Source: ""The robot can learn its decisions to dedicate to elder caring and to self-sustaining at the same time through online reinforcement learning with human feedback."""
+557_enrichme perception and interaction of an assistive robot for the elderly at home,facilitating_functions,"What specific robot functions or features are reported to enhance the user experience (i.e., positive features)? Please provide brief explanations for why these features are considered beneficial. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","The specific robot functions or features reported to enhance the user experience include:
+
+1. **Appearance and Functionalities**: Participants highly appreciated the robot's appearance and functionalities, which contributed to a positive perception of the robot.
+   
+2. **Cognitive Games**: The robot provided various cognitive games that engaged users, helping to maintain and improve their cognitive abilities.
+
+3. **Health Tips**: The robot offered personalized health tips, which were found to be very useful for improving users' nutritional status.
+
+4. **Find Object Feature**: This feature allowed users to locate lost objects around the house, enhancing their independence and reducing frustration.
+
+5. **Environmental Monitoring**: The robot could check home air quality, which users found particularly useful for maintaining a healthy living environment.
+
+Source: ""the participants of the validation phase, after familiarizing themselves with the robot, highly appreciated its appearance and functionalities... All four participants enjoyed having the robot in their rooms, playing the cognitive games... the guidelines provided by the healthy-tips application were found very useful... the user can use the ENRICHME robot to localize different objects around the house... they also found the possibility to check the home air quality with the robot on-board sensors particularly useful."""
+556_pilot and feasibility study on elderly support services using communicative robots and monitoring sensors integrated with cloud robotics,facilitating_functions,"What specific robot functions or features are reported to enhance the user experience (i.e., positive features)? Please provide brief explanations for why these features are considered beneficial. Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","Communicative robots can stimulate elderly individuals to activate a communication link with others, provide temporary responses to nurse calls to reduce the burden on nursing care workers, and automatically record vital information using robot sensors to improve the quality of nursing care. Appropriate vocalization by communicative robots may prevent the deterioration of activities of daily living and initiate dialogue.
+
+Source: ""The study results suggest the following. First, communicative robots can stimulate elderly individuals to activate a communication link with others... Third, automatic recording of vital information using robot sensors can improve the quality of nursing care work... Fourth, appropriate vocalization by communicative robots with sensors may prevent the deterioration of activities of daily living and initiate dialogue."""

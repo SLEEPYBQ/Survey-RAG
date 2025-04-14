@@ -1,136 +1,231 @@
-document,stakeholder,sample_size,country,demographic,impairment,needs,context,care_process,methodology,care_type,robot_type,robot_name,robot_function,facilitating_functions,inhibitory_functions,stakeholder_facilitating,stakeholder_inhibitory,engagement,acceptance,trust,key_findings,additional_info
-applsci-11-10979,"错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)"
-Towards_a_robust_robotic_assistant_for_Comprehensive_Geriatric_Assessment_procedures_updating_the_CLARC_system,"错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)"
-Psychometric_Evaluation_Supported_by_a_Social_Robot_Personality_Factors_and_Technology_Acceptance,"错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)","错误: 1 validation error for OpenAIEmbeddings
-__root__
-  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass `openai_api_key` as a named parameter. (type=value_error)"
+document,involved_stakeholder,sample_size,country,age,gender,demographic_background,cognitive_and_physical_impairment,needs_and_expectations,application_context,process_of_the_care,methodology,Care_type,robot_type,robot_name,design_goal,robot_concern_function,facilitating_functions,inhibitory_functions,stakeholder_facilitating_characteristics,stakeholder_inhibitory_characteristics,engagement,acceptance,trust,key_findings,additional_info,testing_context
+552_a framework for service robots in smart home an efficient solution for domestic healthcare,"Elderly people, caregivers, technical solution providers
+
+Source: ""The authors declare that they obtained a written informed consent from the patients and/or volunteers included in the article.""","N/A
+
+Source: ""The authors declare that they obtained a written informed consent from the patients and/or volunteers included in the article.""","N/A
+
+Source: The authors declare that this report does not contain any personal information that could lead to the identification of the patient(s).","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","The envisioned application context for the robot is domestic healthcare in smart homes.
+
+Source: ""In this paper, we present a framework for robots operating in smart homes for healthcare domestic applications.""","N/A
+
+Source: N/A","N/A
+
+Source: ""All our tools were tested and validated using both simulation and real case experiments.""","Domestic healthcare
+
+Source: ""As the population is growing older, the population subjected to isolation and health issues is on the rise. This creates a rising need for domestic healthcare.""","Nao humanoid robot
+
+Source: ""Furthermore, we also tested our contributions with a robot and a smart environment. We used a Nao H25 robot, a popular humanoid robot that has a lot of abilities, such as locomotion and speech.""","Nao H25
+
+Source: ""Furthermore, we also tested our contributions with a robot and a smart environment. We used a Nao H25 robot...""","N/A
+
+Source: N/A","N/A
+
+Source: N/A","[N/A]
+
+Source: [N/A]","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","The framework provides software tools that enhance the efficiency of robots and smart environments in domestic healthcare applications by addressing uncertainty in context data and the dynamism of the environment.
+
+Source: ""Our framework provides software tools that make robots and smart environments more relevant in real housings. By supporting the uncertainty of context data and the dynamism of the environment, robots and smart environments can achieve more effectively their purposes in domestic healthcare applications.""","N/A
+
+Source: N/A","N/A
+
+Source: ""Our context acquisition approach was tested through a simulation environment based on Freedomotic."""
+549_A_companion_robot_for_daily_care_of_elders_based_on_homeostasis,"Elderly people, caregivers, technical solution providers.
+
+Source: ""The major challenges of setting social robots are poor Wi-Fi connection or the software system being out of action for a short time, and for the elders or the carers, the difficulty in learning how to set up and use the system.""","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: ""The major challenges of setting social robots are poor Wi-Fi connection or the software system being out of action for a short time, and for the elders or the carers, the difficulty in learning how to set up and use the system.""","Cognitive impairments include decline in cognitive functioning and symptoms of dementia. Physical impairments are not specifically mentioned.
+
+Source: ""characteristics such as progressive impairment of an individual’s functioning, decline in cognitive functioning, depressed mood, and altered communication are typical among these elders.""","Elderly people and caregivers expect a robot that looks friendly, can assist with daily tasks, engage in conversations, and provide reminders for important events. They also need the robot to assess cognitive status and ensure safety.
+
+Source: ""Also, older adults in particular want a robot that looks friendly... The motivation of serving is to assist the elders to finish daily tasks, and the motivation of social is to actively present a conversation with the elder.""","The envisioned application context for the robot is elder care, specifically assisting those who suffer from dementia.
+
+Source: ""the actions are designed for the daily care of the elderly and those who suffered from dementia.""","N/A
+
+Source: N/A","N/A
+
+Source: ""The model was trained by reinforcement learning, and used state mapping to be the planner at service.""","Elder care
+
+Source: ""the robot has inner motivations to trigger the aspiration to serve, and the ability to make decisions based on different situations of the surroundings and the user’s intentions and actions.""","Pepper, a humanoid robot.
+
+Source: ""The model was implemented on Pepper, a humanoid robot developed by SoftBank Group, Corp.""","Pepper
+
+Source: ""the model was implemented on Pepper, a humanoid robot developed by SoftBank Group, Corp.""","The design goals set by the solution provider included providing assistance, engaging in conversations, reminding users, and offering entertainment, while also being able to deal with special circumstances such as caring for elders with dementia.
+
+Source: ""Based on our targets, we expected the robot can not only give assistance, but also give conversations, reminding, and provide entertainment. Moreover, the robot should also be able to deal with special circumstances such as elders with dementia, giving a more thoughtful support as a whole.""","The functionalities of the robot demonstrated during the study included recognizing faces and greeting individuals, answering questions about schedules and daily activities, tracking repetitive utterances, and providing actions such as greetings, conversations, weather reports, and schedule reminders.
+
+Source: ""1.(cid:1) Recognize the face and say the name of the incoming person to greet him/her. 2.(cid:1) Answer the following questions: a.(cid:1) Where is my child? b.(cid:1) When should I take the pill? c.(cid:1) Where is the key? 3. Track the repetitive utterance and calm down the patient if needed. 4.(cid:1) Provide the actions (greetings, conversations, weather report, schedule reminder, resting) from the model properly.""","1. Recognizing faces and greeting users: This feature allows the robot to create a more personalized interaction, making users feel acknowledged and valued.
+
+2. Answering questions: The robot can respond to inquiries such as ""Where is my child?"" or ""When should I take the pill?"", providing practical assistance and reducing anxiety for users.
+
+3. Tracking repetitive utterances: This function helps to identify potential cognitive issues, allowing the robot to calm the user if needed, thus enhancing emotional support.
+
+4. Providing actions like greetings, conversations, and schedule reminders: These actions contribute to social interaction and help users stay organized, improving their overall well-being.
+
+Source: ""The robot can learn its decisions to dedicate to elder caring and to self-sustaining at the same time through online reinforcement learning with human feedback.""","The dialogue system of Pepper has limited ability, causing the conversation topic to be restricted. The actions are not diverse enough, hence, we can only address the simple tasks now.
+
+Source: ""1.(cid:1) The dialogue system of Pepper has limited ability, causing the conversation topic restricted. We need to build up the database to enlarge the topic. 2.(cid:1) The actions are not diverse enough. Hence, we can only address the simple tasks now.""","N/A
+
+Source: N/A","N/A
+
+Source: N/A","The evaluation of user engagement in the robot is reported as follows:
+
+[The human satisfaction rate could reach 94% and the robot could also maintain a stable condition to perform long-term service.]
+
+Source: [“Experiment result shows a promising performance after learning, reaching about 94% human satisfaction rate and about 98% robot secure rate, which means the model could effectively satisfy the human needs according to different situation with its own status stabilized.”]","N/A
+
+Source: N/A","N/A
+
+Source: N/A","[The study demonstrates that the homeostasis model implemented on the Pepper robot can effectively assist in elder care, achieving a human satisfaction rate of about 94% and a robot secure rate of about 98%. The model is capable of recognizing faces, answering questions, and tracking repetitive utterances, which is particularly beneficial for dementia patients.]
+
+Source: [“Experiment result shows a promising performance after learning, reaching about 94% human satisfaction rate and about 98% robot secure rate, which means the model could effectively satisfy the human needs according to different situation with its own status stabilized.”]","The actions are not diverse enough. Hence, we can only address the simple tasks now.
+
+Source: ""the actions are not diverse enough. Hence, we can only address the simple tasks now.""","The test was conducted in a lab.
+
+Source: ""The testing environment is set in the lab, with one member pretended to be the elder."""
+557_enrichme perception and interaction of an assistive robot for the elderly at home,"Elderly people, caregivers, technical solution providers
+
+Source: ""The Polish pilot site was managed by the Poznan University of Medical Science (PUMS), which includes a multi-professional team (geriatrician, nurse, physiotherapist, occupational therapist, dietitian, social workers) specialized in care for older individuals.""","N/A
+
+Source: ""the second participant’s house between the 15th of January and the 11th of March in 2018.""","Greece, Poland
+
+Source: ""Two of the participants in Greece chose to name the robots after Greek gods. [...] Also in Poland the participants in the pilot sites chose to personalize the robots...""","The age range is from 66 to 89 years.
+
+Source: ""There were 4 women aged from 73 to 89 years, who quickly familiarized with the use of the robot and the its interface."" and ""the participants were all male and aged 70, 71, and 90, respectively.""","N/A
+
+Source: N/A","The demographic background information reported includes the ages of the elderly participants, which ranged from 66 to 89 years. It mentions that there were 3 females and 1 male in the Polish pilot site, and in the UK testing sites, the participants were all male aged 70, 71, and 90. Additionally, it notes that only one of the users was already familiar with computer-based technology, and two had some vision impairment.
+
+Source: ""The Polish pilot site was managed by the Poznan University of Medical Science (PUMS), which includes a multi-professional team... Here, 4 participants tested the ENRICHME system in their own houses or apartments... There were 3 females and 1 male, with ages between 66 and 83... The UK testing sites... were three 'housing with extra care' schemes... The participants were all male and aged 70, 71, and 90, respectively. Only one of the users was already familiar with computer-based technology, and two of them had some vision impairment.""","N/A
+
+Source: N/A","The explicitly stated or inferred needs and expectations of users, primarily elderly people and caregivers, include the need for personalized care, cognitive stimulation, social interaction, and ease of use of the robotic system. Users expressed a desire for functionalities that help them cope with loneliness, maintain cognitive abilities, and receive reminders for daily activities.
+
+Source: ""the participants pointed out that, when the robot was present, there was 'someone' to talk to, waiting for them at home, and making the environment more friendly. This made easier for them to cope with loneliness."" and ""the robot was very helpful to improve the users’ diet by providing reminders for snacks or meals during the day, and by recommending the type of food that the user was required to eat.""","The envisioned application context for the robot is to provide health monitoring, complementary care, and social support for elderly people at home.
+
+Source: ""The project’s main goal is to enrich the day-to-day experience of elderly people at home with technologies that enable health monitoring, complementary care, and social support.""","The study involved long-term deployment, with participants using the system for approximately 10 weeks. For the first participant, the GUI applications were used in 21 days out of 56 days, with an average interaction time of 45 minutes and a maximum of 166 minutes. The second participant used the GUI applications in 44 days, with an average interaction time of 32 minutes and a maximum of 197 minutes.
+
+Source: ""The validation period for each participant lasted approximately 10 weeks... For the first participant, the GUI applications were used in 21 days out of the total 56 days. The average interaction time was of 45 min with a maximum of 166 min... The second participant used the GUI applications in 44 days. The average interaction time was of 32 min with a maximum of 197 min.""","N/A
+
+Source: ""The acceptance of the ENRICHME robot was emphasized in unstructured interviews throughout the validation phase.""","Personalized care for the elderly, specifically mental and physical stimulation.
+
+Source: ""Multiple research projects have been focused on providing personalized care for the elderly, more specifically mental and physical stimulation.""","The robot used in the study is described as a mobile assistive robot.
+
+Source: ""The mobile robot in ENRICHME is particularly useful for two tasks: RFID object mapping and user monitoring.""","ENRICHME robot
+
+Source: ""This paper described the robotic system implemented by the ENRICHME project to enable health monitoring, complementary care and social support for elderly people at home.""","The design goals set by the solution provider included providing services such as domestic monitoring, object finding, personalized reminders, and cognitive games.
+
+Source: ""the latter were defined with the active participation of elderly people and formal/informal carers [17], highlighting the need of services such as domestic monitoring, object finding, personalized reminders and cognitive games.""","The functionalities of the robot demonstrated, deployed, or introduced to users during the study included cognitive games, health tips, physical activities, object finding, environmental data monitoring, agenda management, video calling, weather forecasting, and news reading.
+
+Source: ""The GUI features eight custom developed applications: Cognitive games, Health tips, Physical activities, Find object, Environmental data (i.e., robot sensors; house sensors), Agenda, Call somebody, Weather forecast and News reading.""","The specific robot functions or features reported to enhance the user experience include:
+
+1. **Appearance and Functionalities**: Participants highly appreciated the robot's appearance and functionalities, which contributed to a positive perception of the robot.
+   
+2. **Cognitive Games**: The robot provided various cognitive games that engaged users, helping to maintain and improve their cognitive abilities.
+
+3. **Health Tips**: The robot offered personalized health tips, which were found to be very useful for improving users' nutritional status.
+
+4. **Find Object Feature**: This feature allowed users to locate lost objects around the house, enhancing their independence and reducing frustration.
+
+5. **Environmental Monitoring**: The robot could check home air quality, which users found particularly useful for maintaining a healthy living environment.
+
+Source: ""the participants of the validation phase, after familiarizing themselves with the robot, highly appreciated its appearance and functionalities... All four participants enjoyed having the robot in their rooms, playing the cognitive games... the guidelines provided by the healthy-tips application were found very useful... the user can use the ENRICHME robot to localize different objects around the house... they also found the possibility to check the home air quality with the robot on-board sensors particularly useful.""","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","The evaluation of user engagement in the robot reported in the study indicates high engagement and acceptance. Participants rated the usefulness, perceived ease of use, perceived enjoyment, and intention to repeat use highly. 
+
+Source: ""usefulness, perceived ease of use, perceived enjoyment and intention to repeat use were rated highly by the participants.""","The study reports high acceptance of the ENRICHME robot among participants, with quantitative measurements indicating high ratings for usefulness, perceived ease of use, perceived enjoyment, and intention to repeat use.
+
+Source: ""usefulness, perceived ease of use, perceived enjoyment and intention to repeat use were rated highly by the participants.""","N/A
+
+Source: N/A","The study found that the ENRICHME robot effectively improved the nutritional status of elderly users, enhanced cognitive engagement through various games, and provided social support, thereby reducing feelings of loneliness. Participants appreciated the robot's functionalities and customization, indicating a positive impact on their daily lives.
+
+Source: ""Although the emphasis of this paper is on the enabling technological innovations of our assistive robot, future work should look at opportune methodologies to evaluate the original expectations and the actual experiences of our elderly users... the participants were happy with the robot customization and interaction capabilities.""","N/A
+
+Source: N/A","The testing context of the study was in elderly residences, specifically in facilities operated by the AKTIOS Group in Greece, LACE Housing in the UK, and the Poznan University of Medical Science (PUMS) in Poland.
+
+Source: ""In total, six ENRICHME systems were deployed in elderly residences of the pilot sites: two in Greece, two in UK, and two in Poland."""
+556_pilot and feasibility study on elderly support services using communicative robots and monitoring sensors integrated with cloud robotics,"Elderly people, caregivers, technical solution providers, researchers, and medical care facilities.
+
+Source: ""The elderly study participants, who participated in the pilot study willingly with written informed consent included 2 nursing home residents... Four caregivers, who took care of the 2 elderly patients and provided written consent to participate in the study, were also part of the study... the study results suggest the following... researchers and medical care facilities.""","Sample size: 6 (2 elderly patients and 4 care workers)
+
+Source: ""This pilot before-after trials using 2 volunteer elderly people with mild dementia and 4 care workers as study participants was conducted from April to June 2015.""","Japan
+
+Source: ""the Tokyo Seishinkai Flora Tanashi.""","Mean age is 39 years.
+
+Source: ""women and 1 man; mean age, 39 years; mean length of caregiving experience, 6.5 years).""","The study reports the participation of 2 women and 1 man among the caregivers.
+
+Source: ""The study participants included 2 nursing home residents of Tokyo Seishinkai and 4 care workers (3 women and 1 man; mean age, 39 years; mean length of caregiving experience, 6.5 years).""","N/A
+
+Source: ""women and 1 man; mean age, 39 years; mean length of caregiving experience, 6.5 years).""","Cognitive impairments described include signs of mild dementia, difficulties in communication, and problems in daily life activities (ADL). Physical impairments include difficulties with navigation, medication management, and daily living activities.
+
+Source: ""Signs of mild form of dementia, but ADL is possible in their homes and community... Many symptoms/behaviours or difficulties in communication that may interfere with ADL... ADL is declining, and occasional nursing care is necessary.""","The explicitly stated or inferred needs and expectations of users, primarily elderly people and caregivers, include the need for improved communication, reduced burden during night shifts, and enhanced monitoring of vital information. There is also an expectation for robots to stimulate communication among elderly individuals and assist caregivers in managing their workload.
+
+Source: ""Communicative robots can stimulate elderly individuals to activate a communication link with others... Temporary responses to nurse calls by the robots may help to effectively reduce the burden on nursing care workers during the night shift... Automatic recording of vital information using robot sensors can improve the quality of nursing care work.""","The envisioned application context for the robot is in caring for elderly individuals, particularly in nursing homes and at home, to address the increased demand for elderly care and the anticipated caregiver shortage in Japan.
+
+Source: ""the purpose of this study was to identify the tasks and problems associated with the deployment of communicative robots and a monitoring system for medical care in facilities as well as patients' homes because this technology has been discussed as a means of addressing the increased elderly care demand and the anticipated caregiver shortage in Japan.""","The study involved a pilot before-after trial conducted over a period from April to June 2015, indicating a short-term use of the communicative robots and monitoring sensors. 
+
+Source: ""This pilot before-after study investigated the possible effects of communicative robots, used with a sensing system supported by cloud robotics, in caring for elderly people.""","Pilot before-after trials using qualitative and quantitative methods.
+
+Source: ""This pilot before-after study investigated the possible effects of communicative robots, used with a sensing system supported by cloud robotics, in caring for elderly people.""","The study is focused on elderly care using communicative robots and monitoring sensors.
+
+Source: ""The purpose of this study was to identify the tasks and problems associated with the deployment of communicative robots and a monitoring system for medical care in facilities as well as patients' homes...""","The robot used in the study is a communicative robot called Sota.
+
+Source: ""The communicative robot was a Sota (Vstone Co Ltd, Osaka, Japan)""","Sota
+
+Source: ""the communicative robot was a Sota (Vstone Co Ltd, Osaka, Japan)""","N/A
+
+Source: N/A","The functionalities of the robot demonstrated during the study included stimulating communication links with elderly individuals, responding to nurse calls, automatic recording of vital information, appropriate vocalization to prevent deterioration of daily living activities, and guiding participants to confirm safety and medication adherence.
+
+Source: ""First, communicative robots can stimulate elderly individuals to activate a communication link with others... Third, automatic recording of vital information using robot sensors can improve the quality of nursing care work... Fourth, appropriate vocalization by communicative robots with sensors may prevent the deterioration of activities of daily living and initiate dialogue.""","Communicative robots can stimulate elderly individuals to activate a communication link with others, provide temporary responses to nurse calls to reduce the burden on nursing care workers, and automatically record vital information using robot sensors to improve the quality of nursing care. Appropriate vocalization by communicative robots may prevent the deterioration of activities of daily living and initiate dialogue.
+
+Source: ""The study results suggest the following. First, communicative robots can stimulate elderly individuals to activate a communication link with others... Third, automatic recording of vital information using robot sensors can improve the quality of nursing care work... Fourth, appropriate vocalization by communicative robots with sensors may prevent the deterioration of activities of daily living and initiate dialogue.""","N/A
+
+Source: N/A","N/A
+
+Source: N/A","N/A
+
+Source: N/A","The evaluation of user engagement in the robot reported in the study includes quantitative measurements of conversations and qualitative descriptions of acceptance and trust development.
+
+Source: ""The number of conversations with care workers increased from a mean of 11.3 to 14.0, and conversations with residents increased significantly from 1.5 to 9.5 (P < 0.05). Care professionals were initially not so certain about the robot's capabilities. However, they gradually began to accept the robots as their assistants.""","N/A
+
+Source: N/A","N/A
+
+Source: N/A","The study suggests that communicative robots can stimulate elderly individuals to activate communication links, reduce the burden on nursing care workers during night shifts, improve the quality of nursing care work through automatic recording of vital information, prevent deterioration of activities of daily living, and that care professionals gradually accepted the robots as assistants.
+
+Source: ""The study results suggest the following. First, communicative robots can stimulate elderly individuals to activate a communication link with others... Sixth, also in this study, care professionals were initially not so certain about the robot's capabilities. However, they gradually began to accept the robots as their assistants...""","N/A
+
+Source: ""Given that this is a pilot and feasibility study with a small number of participants and limited equipment, it is important to mention that concrete conclusions cannot be obtained based on this study alone; however, there are many insights from this study that can be applied by researchers and medical care facilities.""","The test was conducted in a care home.
+
+Source: ""The elderly study participants, who participated in the pilot study willingly with written informed consent included 2 nursing home residents of the Tokyo Seishinkai Flora Tanashi."""

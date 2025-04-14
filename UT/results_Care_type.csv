@@ -1,0 +1,10 @@
+document,question_id,question,result
+3640794.3665581,Care_type,"What type of care is the study focused on?Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","Smart healthcare.
+
+Source: ""Our findings reveal strong correlations between both visual and auditory features and perceived trustworthiness. This underscores the importance of incorporating a comprehensive range of nonverbal cues and auditory signals into interface design."""

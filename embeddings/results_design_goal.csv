@@ -1,0 +1,37 @@
+document,question_id,question,result
+552_a framework for service robots in smart home an efficient solution for domestic healthcare,design_goal,"What design goals were set by the solution provider when designing the robot or its interaction functions? Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","N/A
+
+Source: N/A"
+549_A_companion_robot_for_daily_care_of_elders_based_on_homeostasis,design_goal,"What design goals were set by the solution provider when designing the robot or its interaction functions? Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","The design goals set by the solution provider included providing assistance, engaging in conversations, reminding users, and offering entertainment, while also being able to deal with special circumstances such as caring for elders with dementia.
+
+Source: ""Based on our targets, we expected the robot can not only give assistance, but also give conversations, reminding, and provide entertainment. Moreover, the robot should also be able to deal with special circumstances such as elders with dementia, giving a more thoughtful support as a whole."""
+557_enrichme perception and interaction of an assistive robot for the elderly at home,design_goal,"What design goals were set by the solution provider when designing the robot or its interaction functions? Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","The design goals set by the solution provider included providing services such as domestic monitoring, object finding, personalized reminders, and cognitive games.
+
+Source: ""the latter were defined with the active participation of elderly people and formal/informal carers [17], highlighting the need of services such as domestic monitoring, object finding, personalized reminders and cognitive games."""
+556_pilot and feasibility study on elderly support services using communicative robots and monitoring sensors integrated with cloud robotics,design_goal,"What design goals were set by the solution provider when designing the robot or its interaction functions? Please provide your answer in the following format:
+
+[Your concise answer here. If information is not available, write 'N/A']
+
+Source: [Quote the relevant text from the paper here]
+
+Do not include any additional explanations.","N/A
+
+Source: N/A"
